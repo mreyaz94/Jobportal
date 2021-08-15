@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pune Jobs</title>
+</head>
+<body>
+<h1>Pune Jobs Information</h1><hr>
+    {% if job %}
+        <table border="2">
+            <thead>
+            <th>Job Title</th>
+            <th>Experience</th>
+            <th>Company Name</th>
+            <th>Locations</th>
+            </thead>
+            {% for pune in job %}
+                <tr>
+                    <td>{{pune.jobtitle}}</td>
+                    <td>{{pune.exp}}</td>
+                    <td>{{pune.company}}</td>
+                    <td>{{pune.locations}}</td>
+                </tr>
+            {%endfor%}
+
+        </table>
+        {%else%}
+            <p> No Job Found in Pune!!! </p>
+        {%endif%}
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mumbai Jobs</title>
+</head>
+<body>
+<h1>Mumbai Jobs Information</h1><hr>
+    {% if job %}
+        <table border="2">
+            <thead>
+            <th>Job Title</th>
+            <th>Experience</th>
+            <th>Company Name</th>
+            <th>Locations</th>
+            </thead>
+            {% for mumbai in job %}
+                <tr>
+                    <td>{{mumbai.jobtitle}}</td>
+                    <td>{{mumbai.exp}}</td>
+                    <td>{{mumbai.company}}</td>
+                    <td>{{mumbai.locations}}</td>
+                </tr>
+            {%endfor%}
+
+        </table>
+        {%else%}
+            <p> No Employee Records Found!!! </p>
+
+        {%endif%}
+</body>
+</html>
