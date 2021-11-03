@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {%for i in obj%}
+    <ul>
+        <li> {{i.name|title}}</li>
+        <li> {{i.subject|lower}}</li>
+        <li> {{i.dept|upper}}</li>
+        <li> {{i.dat|date:"d-m-y"}}</li>
+
+    </ul><hr>
+    {%endfor%}
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {%load cust_filters%}
+    {%for i in obj%}
+    <ul>
+        <li> {{i.name|add:" Pvt Ltd" }}</li>
+        <li> {{i.subject|t_n:10}}</li>
+        <li> {{i.dept|t_n:7}}</li>
+        <li> {{i.dat|timesince}}</li>
+
+    </ul><hr>
+    {%endfor%}
+</body>
+</html>

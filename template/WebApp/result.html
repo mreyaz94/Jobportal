@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>ALL Jobs posted Information</h1><hr>
+    {% if job %}
+        <table border="2">
+            <thead>
+            <th>Job Title</th>
+            <th>Minimun  Experience</th>
+            <th>Company Name</th>
+            <th>Locations</th>
+            </thead>
+            {% for j in job %}
+                <tr>
+                    <td>{{j.jobtitle}}</td>
+                    <td>{{j.exp}}</td>
+                    <td>{{j.company}}</td>
+                    <td>{{j.locations}}</td>
+                </tr>
+            {%endfor%}
+
+        </table>
+        {%else%}
+            <p> No Employee Records Found!!! </p>
+
+        {%endif%}
+</body>
+</html>
