@@ -16,7 +16,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'template')
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
-
+# STATIC_ROOT  = os.path.join(BASE_DIR, 'static')
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
