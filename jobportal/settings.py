@@ -30,7 +30,7 @@ SECRET_KEY = '6weww_@b2p2(*(+dmc*x4ep@goldv9n3--s)9s7anltmb_1bj-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["newsaap.herokuapp.com"]
+ALLOWED_HOSTS = ["jobportall.herokuapp.com"]
 
 
 # Application definition
@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'WebApp',
+    'rest_framework',
+    'rest_framework_jwt',
+
 ]
 
 MIDDLEWARE = [
@@ -126,3 +129,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS=[STATIC_DIR,]
+
+REST_FRAMEWORK = {
+
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+
+}
